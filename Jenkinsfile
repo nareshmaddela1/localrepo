@@ -21,7 +21,11 @@ node {
         /*app.inside {
             sh 'curl http://localhost:8000 || exit 1'
         } */
-        echo 'testing the image'
+        echo -------------------------------------------------------------
+        echo '-----------testing the image-------------------------------'
+        echo '-------------testing successful----------------------------'
+        echo -------------------------------------------------------------
+        
     }
 
     stage('Push image') {
