@@ -26,9 +26,6 @@ node {
     }
     stage('Push image') {
           input "push to prod?"
-        script {
-              timeout(time: 50, unit: 'MINUTES')
-            }
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
