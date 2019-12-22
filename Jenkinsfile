@@ -27,9 +27,7 @@ node {
     stage('Deploy approval'){
     input "push to prod?"
         script {
-              timeout(time: 50, unit: 'MINUTES') {
-                input(id: "push to prod", message: "Deploy ${params.Hello-world}?", ok: 'Deploy')
-              }
+              timeout(time: 50, unit: 'MINUTES')
             }
 }
 
