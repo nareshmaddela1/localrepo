@@ -21,9 +21,17 @@ node {
         /*app.inside {
             sh 'curl http://localhost:8000 || exit 1'
         } */
-        echo '-------------testing successful----------------------------'
+        echo 'test successful'
         
     }
+    stage('Deploy approval'){
+    input "push to prod?"
+        script {
+              timeout(time: 50, unit: 'MINUTES') {
+                input(id: "push to prod", message: "Deploy ${params.Hello-world}?", ok: 'Deploy')
+              }
+            }
+}
 
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
