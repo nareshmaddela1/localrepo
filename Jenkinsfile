@@ -20,15 +20,12 @@ node {
          * Run a curl inside the newly-build Docker image */
         echo 'test successful'
         /*we will setup manual approval before pushingh to deploy stage*/
-         script {
-              timeout(time: 50, unit: 'MINUTES') {
-                input(id: "Deploy Gate", message: "Deploy ${params.Hello-world}?", ok: 'Push image')
-              }
-            }
+
         
     }
     stage('Push image') {
         
+        input "push to prod?"
         
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
