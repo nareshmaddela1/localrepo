@@ -4,7 +4,7 @@ var http = require('http');
 // configure our HTTP server
 var server = http.createServer(function (request, response) {
   response.writeHead(500, {"Content-Type": "text/plain"});
-  response.end("Hello-World welcome to webhooks...\n");
+  response.end("Hello-World welcome to webhooks were added...\n");
 });
 
 // listen on localhost:8000
