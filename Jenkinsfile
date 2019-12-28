@@ -15,10 +15,10 @@ node {
         app = docker.build("nareshmaddela117/pipeline")
     }
     
-    stage('Email Notification') {
+    /*stage('Email Notification') {
         mail bcc: '', body: '''Hi welcome to jenkins email services
         Naresh Maddela''', cc: '', from: '', replyTo: '', subject: 'Hello-World Project', to: 'naresh.aws39@gmail.com'
-    }
+    } */
 
     stage('Test image') {
         /* We test our image with different tests in parallel:
