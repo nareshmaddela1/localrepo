@@ -21,11 +21,15 @@ node {
     } */
 
     stage('Test image') {
-        /* We test our image with different tests in parallel:
-         * Run a curl inside the newly-build Docker image */
-        echo 'test successful'
-        /*we will setup manual approval before pushingh to deploy stage*/
-        echo 'test was successful'
+        agent { docker 'sonarqube:latest' } 
+            steps {
+                echo 'Hello, Maven'
+               // sh 'mvn --version'
+                /* We test our image with different tests in parallel:
+                   * Run a curl inside the newly-build Docker image */
+                echo 'test successful'
+               /*we will setup manual approval before pushingh to deploy stage*/
+                echo 'test was successful'
 
         
     }
