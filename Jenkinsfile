@@ -21,7 +21,6 @@ node {
     } */
 
     stage('Test image') {
-         mvn sonar:sonar -Dsonar.host.url=http://54.175.122.115:9000
                // sh 'mvn --version'
                 /* We test our image with different tests in parallel:
                    * Run a curl inside the newly-build Docker image */
