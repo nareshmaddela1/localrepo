@@ -30,6 +30,7 @@ node {
                 echo 'test successful'
                /*we will setup manual approval before pushingh to deploy stage*/
                 echo 'test was successful'
+            }
 
         
     }
