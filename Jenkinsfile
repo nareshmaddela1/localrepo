@@ -21,16 +21,13 @@ node {
     } */
 
     stage('Test image') {
-        agent { docker 'sonarqube:latest' } 
-            steps {
-                echo 'Hello, Maven'
+         mvn sonar:sonar -Dsonar.host.url=http://54.175.122.115:9000
                // sh 'mvn --version'
                 /* We test our image with different tests in parallel:
                    * Run a curl inside the newly-build Docker image */
-                echo 'test successful'
+         echo 'test successful'
                /*we will setup manual approval before pushingh to deploy stage*/
-                echo 'test was successful'
-            }
+         echo 'test was successful'
 
         
     }
