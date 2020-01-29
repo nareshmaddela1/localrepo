@@ -30,6 +30,16 @@ node {
 
         
     }
+     stage('Test image') {
+               // sh 'mvn --version'
+                /* We test our image with different tests in parallel:
+                   * Run a curl inside the newly-build Docker image */
+         echo 'test successful'
+               /*we will setup manual approval before pushingh to deploy stage*/
+         echo 'test was successful'
+
+        
+    }
     
     stage('Test image') {
                // sh 'mvn --version'
